@@ -92,5 +92,21 @@ Protocol Buffer Use Cases:
 ```
 git clone -b v1.53.0 --depth 1 https://github.com/grpc/grpc-java
 cd grpc-java/examples
+./gradlew installDist
+
+./build/install/examples/bin/hello-world-server
+
+Mar 11, 2023 1:37:09 AM io.grpc.examples.helloworld.HelloWorldServer start
+INFO: Server started, listening on 50051
+
+./build/install/examples/bin/hello-world-client
+Mar 11, 2023 1:37:15 AM io.grpc.examples.helloworld.HelloWorldClient greet
+INFO: Will try to greet world ...
+Mar 11, 2023 1:37:16 AM io.grpc.examples.helloworld.HelloWorldClient greet
+INFO: Greeting: Hello world
+
 ```
+
+<img width="562" alt="Screenshot 2023-03-11 at 1 36 39 AM" src="https://user-images.githubusercontent.com/43849911/224417582-048538d7-5872-40cd-8492-674b667ec28d.png">
+
 
