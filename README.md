@@ -1,9 +1,11 @@
 ```
-First thinh which comes to our mind while creating web application is 
-REST.
+First thinh which comes to our mind while creating 
+web application is REST.
 
 There's an alternative like GraphQL but it has its own advantages 
 and disadvantages.
+
+Google Remote Procedure Call (gRPC) is roughly 7 times faster than REST when receiving data & roughly 10 times faster than REST when sending data for this specific payload. This is mainly due to the tight packing of the Protocol Buffers and the use of HTTP/2 by gRPC
 
 gRPC is a modern open source high performance Remote Procedure Call 
 (RPC) framework that can run in any environment. It can efficiently 
@@ -15,7 +17,8 @@ connect devices, mobile applications and browsers to backend services.
 Google Remote Procedure Call, more commonly known as gRPC,
 is a remote procedure call (RPC) framework that brings
 performance benefits and modern features to client-server 
-applications. Like RPC, it allows you to directly
-]call methods on other machines.
+applications. Like RPC, it allows you to directly 
+call methods on other machines.
+
 
 ```
