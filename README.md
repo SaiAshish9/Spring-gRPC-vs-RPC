@@ -17,15 +17,24 @@ performance benefits and modern features to client-server
 applications. Like RPC, it allows you to directly 
 call methods on other machines.
 
-Remote Procedure Call is a technique for building distributed systems. Basically, it allows a program on one machine to call a subroutine on another machine without knowing that it is remote. RPC is not a transport protocol: rather, it is a method of using existing communications features in a transparent way. This transparency is one of the great strengths of RPC as a tool. Because the application software does not contain any communication code, it is independent of
+Remote Procedure Call is a technique for building distributed systems. Basically, 
+it allows a program on one machine to call a subroutine on another machine without
+knowing that it is remote. RPC is not a transport protocol: rather, it is a method of
+using existing communications features in a transparent way. This transparency is one 
+of the great strengths of RPC as a tool. Because the application software does not 
+contain any communication code, it is independent of
 The particular communications hardware and protocols used
 The operating system used
 The calling sequence needed to use the underlying communications software
-This means that application software can be designed and written before these choices have even been made. Because it takes care of any data reformatting needed, RPC also provides transparency to byte ordering and differences in data representation (real number formats, etc). RPC is not a new technique.
+This means that application software can be designed and written before these choices 
+have even been made. Because it takes care of any data reformatting needed, RPC also
+provides transparency to byte ordering and differences in data representation (real 
+number formats, etc). RPC is not a new technique.
 
 https://www.javatpoint.com/what-is-rpc-in-operating-system
 
-https://www.w3.org/History/1992/nfs_dxcern_mirror/rpc/doc/Introduction/WhatIs.html#:~:text=Remote%20Procedure%20Call%20is%20a,features%20in%20a%20transparent%20way.
+https://www.w3.org/History/1992/nfs_dxcern_mirror/rpc/doc/Introduction/WhatIs.html
+#:~:text=Remote%20Procedure%20Call%20is%20a,features%20in%20a%20transparent%20way.
 
 Its right now under CNCF(cloud native computing foundation) project for incubation.
 
@@ -42,7 +51,11 @@ system.
 
 gRPC use protcol buffers for communication.
 
-Protocol buffers are Google’s language-neutral, platform-neutral, extensible mechanism for serializing structured data – think XML, but smaller, faster, and simpler. You define how you want your data to be structured once, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages.
+Protocol buffers are Google’s language-neutral, platform-neutral, extensible mechanism 
+for serializing structured data – think XML, but smaller, faster, and simpler. 
+You define how you want your data to be structured once, then you can use special 
+generated source code to easily write and read your structured data to and 
+from a variety of data streams and using a variety of languages.
 
 message Person {
   optional string name = 1;
@@ -110,6 +123,45 @@ cd src/main/proto/
 
 ls
 hello_streaming.proto	helloworld.proto	route_guide.proto
+
+cat helloworld.proto 
+// Copyright 2015 The gRPC Authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
 
 
 ```
