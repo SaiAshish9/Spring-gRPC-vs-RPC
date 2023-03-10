@@ -319,4 +319,19 @@ common =>
 ./mvn clean install
 
 brew install grpcurl
+
+grpcurl --plaintext localhost:9090 list
+
+grpcurl --plaintext localhost:9090 list com.sai.grpc.GreetingService
+com.sai.grpc.GreetingService.greeting
+
+grpcurl --plaintext -d '{"message": "how r u?"}' localhost:9090 com.sai.grpc.GreetingService/greeting
+{"message": "how r u?. Hello From Server. "}
+
+grpcurl --plaintext -d '{"message": "how r u?"}' localhost:9090 com.sai.grpc.GreetingService/greeting
+{"message": "how r u?"}
+
+Natively spring doesn't support any library right now.
+
+grpc is faster than rest calls since it does binary protocol translation
 ```
