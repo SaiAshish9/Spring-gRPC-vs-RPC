@@ -218,8 +218,40 @@ message HelloReply {
 
 nano src/main/java/io/grpc/examples/helloworld/HelloWorldServer.java
 
+  @Override
+  public void sayHelloAgain(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
+    HelloReply reply = HelloReply.newBuilder().setMessage("Hello again " + req.getName()).build();
+    responseObserver.onNext(reply);
+    responseObserver.onCompleted();
+  }
+
 ctrl x => yes
 
+nano src/main/java/io/grpc/examples/helloworld/HelloWorldClient.java
+ctrl x => yes
+
+  try {
+    response = blockingStub.sayHelloAgain(request);
+  } catch (StatusRuntimeException e) {
+    logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
+    return;
+  }
+  logger.info("Greeting: " + response.getMessage());
+
+./gradlew installDist
+
+./build/install/examples/bin/hello-world-server
+Mar 11, 2023 2:04:36 AM io.grpc.examples.helloworld.HelloWorldServer start
+INFO: Server started, listening on 50051
+
+
+/build/install/examples/bin/hello-world-client                    
+Mar 11, 2023 2:04:46 AM io.grpc.examples.helloworld.HelloWorldClient greet
+INFO: Will try to greet world ...
+Mar 11, 2023 2:04:46 AM io.grpc.examples.helloworld.HelloWorldClient greet
+INFO: Greeting: Hello world
+Mar 11, 2023 2:04:46 AM io.grpc.examples.helloworld.HelloWorldClient greet
+INFO: Greeting: Hello again world
 
 ```
 
@@ -266,7 +298,10 @@ message HelloReply {
   string message = 1;
 }
 ```
+
 <img width="985" alt="Screenshot 2023-03-11 at 1 57 36 AM" src="https://user-images.githubusercontent.com/43849911/224422006-43c3c883-16be-45f4-9e0c-b3a3ec39d5ae.png">
 
+<img width="980" alt="Screenshot 2023-03-11 at 2 01 24 AM" src="https://user-images.githubusercontent.com/43849911/224422564-a967507d-c18d-4863-8998-b1ef93e97793.png">
 
+<img width="983" alt="Screenshot 2023-03-11 at 2 04 05 AM" src="https://user-images.githubusercontent.com/43849911/224423021-eaedc62f-4904-4d64-ac99-37dbf672444f.png">
 
