@@ -44,9 +44,41 @@ gRPC use protcol buffers for communication.
 
 Protocol buffers are Google’s language-neutral, platform-neutral, extensible mechanism for serializing structured data – think XML, but smaller, faster, and simpler. You define how you want your data to be structured once, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages.
 
+message Person {
+  optional string name = 1;
+  optional int32 id = 2;
+  optional string email = 3;
+}
+A proto definition.
+
+Languages supported by gRPC:
+
+python, c/c++, ruby, java, go, c#, node.js, php.
+
+protocol buffer is just another defination language. 
+
+message Event {
+   string topic = 1;
+}
+
+protocol buffer is a interface defination language (IDL). 
+We'll define IDL in the same way we define protocol buffer 
+schema.
+
+It also has the data model which defines req and res structure
+
+It used binary format for transmitting the requests.
+
 4. Streaming & Flow Controlled
 5. Designed for harsh environments (timeout, lameducking,
 load-balancing, cancellation, ...)
 6. Support in 10 languages & first class mobile support
 7. Layered & Pluggable - its bring own monitoring, auth, naming, load balancing, etc.
 ```
+
+<img width="720" alt="Screenshot 2023-03-11 at 1 16 22 AM" src="https://user-images.githubusercontent.com/43849911/224413467-55314ce4-dfba-42e8-9b64-421822f0e25c.png">
+
+<img width="736" alt="Screenshot 2023-03-11 at 1 16 38 AM" src="https://user-images.githubusercontent.com/43849911/224413505-d8579ba5-601e-4d1d-8d96-fa683ec4d18a.png">
+
+
+
