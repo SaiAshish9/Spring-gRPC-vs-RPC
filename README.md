@@ -416,4 +416,4 @@ Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/protoc-gen
 
 <img width="1576" alt="Screenshot 2023-03-11 at 3 00 44 AM" src="https://user-images.githubusercontent.com/43849911/224432115-bf96411d-8d51-4cd2-bd07-e0cb6f8784b3.png">
 
-<img width="341" alt="Screenshot 2023-03-11 at 3 03 03 AM" src="https://user-images.githubusercontent.com/43849911/224432515-a378707e-e874-4e64-8d87-80e2d445949d.png">
+<img width="862" alt="Screenshot 2023-03-11 at 3 07 31 AM" src="https://user-images.githubusercontent.com/43849911/224433169-be602782-e510-4a26-bc88-d440631abea5.png">
