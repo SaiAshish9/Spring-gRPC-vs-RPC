@@ -69,6 +69,8 @@ It also has the data model which defines req and res structure
 
 It used binary format for transmitting the requests.
 
+Google Cloud Services provides protocol buffer support.
+
 4. Streaming & Flow Controlled
 5. Designed for harsh environments (timeout, lameducking,
 load-balancing, cancellation, ...)
