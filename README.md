@@ -335,3 +335,72 @@ Natively spring doesn't support any library right now.
 
 grpc is faster than rest calls since it does binary protocol translation
 ```
+
+```
+./mvnw clean install
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: osx
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 12.6
+[INFO] os.detected.version.major: 12
+[INFO] os.detected.version.minor: 6
+[INFO] os.detected.classifier: osx-x86_64
+[INFO] 
+[INFO] ----------------------< com.sai:greeting-common >-----------------------
+[INFO] Building greeting-common 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ greeting-common ---
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.6.1:compile (default) @ greeting-common ---
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/protobuf/protoc/3.14.0/protoc-3.14.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/protobuf/protoc/3.14.0/protoc-3.14.0.pom (5.2 kB at 3.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/protobuf/protoc/3.14.0/protoc-3.14.0-osx-x86_64.exe
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/protobuf/protoc/3.14.0/protoc-3.14.0-osx-x86_64.exe (12 MB at 11 MB/s)
+[INFO] Compiling 1 proto file(s) to /Users/saiashish/Desktop/sai/projects/grpc-spring-boot-example/greeting-common/target/generated-sources/protobuf/java
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.6.1:compile-custom (default) @ greeting-common ---
+Downloading from central: https://repo.maven.apache.org/maven2/io/grpc/protoc-gen-grpc-java/1.35.0/protoc-gen-grpc-java-1.35.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/protoc-gen-grpc-java/1.35.0/protoc-gen-grpc-java-1.35.0.pom (1.3 kB at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/grpc/protoc-gen-grpc-java/1.35.0/protoc-gen-grpc-java-1.35.0-osx-x86_64.exe
+Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/protoc-gen-grpc-java/1.35.0/protoc-gen-grpc-java-1.35.0-osx-x86_64.exe (6.1 MB at 12 MB/s)
+[INFO] Compiling 1 proto file(s) to /Users/saiashish/Desktop/sai/projects/grpc-spring-boot-example/greeting-common/target/generated-sources/protobuf/grpc-java
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ greeting-common ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/saiashish/Desktop/sai/projects/grpc-spring-boot-example/greeting-common/src/main/resources
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ greeting-common ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to /Users/saiashish/Desktop/sai/projects/grpc-spring-boot-example/greeting-common/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ greeting-common ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/saiashish/Desktop/sai/projects/grpc-spring-boot-example/greeting-common/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ greeting-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ greeting-common ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ greeting-common ---
+[INFO] Building jar: /Users/saiashish/Desktop/sai/projects/grpc-spring-boot-example/greeting-common/target/greeting-common-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ greeting-common ---
+[INFO] Installing /Users/saiashish/Desktop/sai/projects/grpc-spring-boot-example/greeting-common/target/greeting-common-0.0.1-SNAPSHOT.jar to /Users/saiashish/.m2/repository/com/sai/greeting-common/0.0.1-SNAPSHOT/greeting-common-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/saiashish/Desktop/sai/projects/grpc-spring-boot-example/greeting-common/pom.xml to /Users/saiashish/.m2/repository/com/sai/greeting-common/0.0.1-SNAPSHOT/greeting-common-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.759 s
+[INFO] Finished at: 2023-03-11T02:45:52+05:30
+[INFO] ------------------------------------------------------------------------
+
+```
