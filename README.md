@@ -295,8 +295,10 @@ message HelloRequest {
 
 // The response message containing the greetings
 message HelloReply {
-  string message = 1;
+  string message = 1; 
 }
+
+default index as 1
 ```
 
 <img width="985" alt="Screenshot 2023-03-11 at 1 57 36 AM" src="https://user-images.githubusercontent.com/43849911/224422006-43c3c883-16be-45f4-9e0c-b3a3ec39d5ae.png">
