@@ -81,4 +81,10 @@ load-balancing, cancellation, ...)
 <img width="736" alt="Screenshot 2023-03-11 at 1 16 38 AM" src="https://user-images.githubusercontent.com/43849911/224413505-d8579ba5-601e-4d1d-8d96-fa683ec4d18a.png">
 
 
+```
+Protocol Buffer Use Cases:
+```
+
+<img width="792" alt="Screenshot 2023-03-11 at 1 18 26 AM" src="https://user-images.githubusercontent.com/43849911/224413824-4e47e8cc-e4c2-4242-9e5d-4645f7fb9beb.png">
+
 
