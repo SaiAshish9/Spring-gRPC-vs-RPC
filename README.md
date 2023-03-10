@@ -163,9 +163,58 @@ message HelloReply {
   string message = 1;
 }
 
-
+During the compile time new Greeter grpc will be created which has all 
+the client of our classes based on definition. 
 ```
 
 <img width="562" alt="Screenshot 2023-03-11 at 1 36 39 AM" src="https://user-images.githubusercontent.com/43849911/224417582-048538d7-5872-40cd-8492-674b667ec28d.png">
 
+```
+nano 
+helloworld.proto 
+```
+
+<img width="558" alt="Screenshot 2023-03-11 at 1 54 03 AM" src="https://user-images.githubusercontent.com/43849911/224421445-e6bb724a-14bf-4452-b251-3eeb68d6e3ba.png">
+
+```
+cat helloworld.proto 
+// Copyright 2015 The gRPC Authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+```
 
