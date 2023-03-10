@@ -105,6 +105,13 @@ INFO: Will try to greet world ...
 Mar 11, 2023 1:37:16 AM io.grpc.examples.helloworld.HelloWorldClient greet
 INFO: Greeting: Hello world
 
+
+cd src/main/proto/
+
+ls
+hello_streaming.proto	helloworld.proto	route_guide.proto
+
+
 ```
 
 <img width="562" alt="Screenshot 2023-03-11 at 1 36 39 AM" src="https://user-images.githubusercontent.com/43849911/224417582-048538d7-5872-40cd-8492-674b667ec28d.png">
