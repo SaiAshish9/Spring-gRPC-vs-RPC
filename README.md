@@ -89,4 +89,8 @@ Protocol Buffer Use Cases:
 
 <img width="792" alt="Screenshot 2023-03-11 at 1 18 26 AM" src="https://user-images.githubusercontent.com/43849911/224413824-4e47e8cc-e4c2-4242-9e5d-4645f7fb9beb.png">
 
+```
+git clone -b v1.53.0 --depth 1 https://github.com/grpc/grpc-java
+cd grpc-java/examples
+```
 
