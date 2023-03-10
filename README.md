@@ -309,3 +309,7 @@ message HelloReply {
 
 <img width="1122" alt="Screenshot 2023-03-11 at 2 17 15 AM" src="https://user-images.githubusercontent.com/43849911/224425196-649add04-a0fe-492b-91fb-c652661ff421.png">
 
+
+```
+proto buffs are basically the json schemas.
+```
