@@ -321,15 +321,22 @@ common =>
 brew install grpcurl
 
 grpcurl --plaintext localhost:9090 list
+com.sai.grpc.GreetingService
+grpc.health.v1.Health
+grpc.reflection.v1alpha.ServerReflection
 
 grpcurl --plaintext localhost:9090 list com.sai.grpc.GreetingService
 com.sai.grpc.GreetingService.greeting
 
 grpcurl --plaintext -d '{"message": "how r u?"}' localhost:9090 com.sai.grpc.GreetingService/greeting
-{"message": "how r u?. Hello From Server. "}
+{
+  "message": "Received your how r u?. Hello From Server. "
+}
 
 grpcurl --plaintext -d '{"message": "how r u?"}' localhost:9090 com.sai.grpc.GreetingService/greeting
-{"message": "how r u?"}
+{
+  "message": "Received your how r u?. Hello From Server. "
+}
 
 Natively spring doesn't support any library right now.
 
@@ -404,3 +411,5 @@ Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/protoc-gen
 [INFO] ------------------------------------------------------------------------
 
 ```
+
+<img width="989" alt="Screenshot 2023-03-11 at 2 59 23 AM" src="https://user-images.githubusercontent.com/43849911/224431903-ee4ea644-ff66-4a32-aa07-8c08a85504a4.png">
