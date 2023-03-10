@@ -17,5 +17,12 @@ performance benefits and modern features to client-server
 applications. Like RPC, it allows you to directly 
 call methods on other machines.
 
+Its right now under CNCF(cloud native computing foundation) project for incubation.
 
+gRPC is used by Netflix and Cisco.
+```
+
+```
+gRPC is open source RPC framework that makes it easy to build a heterogenous distributed
+system.
 ```
