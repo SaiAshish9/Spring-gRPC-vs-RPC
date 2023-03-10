@@ -314,4 +314,9 @@ default index as 1
 
 ```
 proto buffs are basically the json schemas.
+
+common => 
+./mvn clean install
+
+brew install grpcurl
 ```
