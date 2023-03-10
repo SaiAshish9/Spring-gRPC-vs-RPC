@@ -23,6 +23,8 @@ The operating system used
 The calling sequence needed to use the underlying communications software
 This means that application software can be designed and written before these choices have even been made. Because it takes care of any data reformatting needed, RPC also provides transparency to byte ordering and differences in data representation (real number formats, etc). RPC is not a new technique.
 
+https://www.javatpoint.com/what-is-rpc-in-operating-system
+
 https://www.w3.org/History/1992/nfs_dxcern_mirror/rpc/doc/Introduction/WhatIs.html#:~:text=Remote%20Procedure%20Call%20is%20a,features%20in%20a%20transparent%20way.
 
 Its right now under CNCF(cloud native computing foundation) project for incubation.
