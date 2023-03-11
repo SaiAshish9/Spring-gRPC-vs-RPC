@@ -218,25 +218,22 @@ message HelloReply {
 
 nano src/main/java/io/grpc/examples/helloworld/HelloWorldServer.java
 
-  @Override
-  public void sayHelloAgain(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
-    HelloReply reply = HelloReply.newBuilder().setMessage("Hello again " + req.getName()).build();
-    responseObserver.onNext(reply);
-    responseObserver.onCompleted();
-  }
-
-ctrl x => yes
+@Override
+public void sayHelloAgain(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
+   HelloReply reply = HelloReply.newBuilder().setMessage("Hello again " + req.getName()).build();
+   responseObserver.onNext(reply);
+   responseObserver.onCompleted();
+}
 
 nano src/main/java/io/grpc/examples/helloworld/HelloWorldClient.java
-ctrl x => yes
 
-  try {
-    response = blockingStub.sayHelloAgain(request);
-  } catch (StatusRuntimeException e) {
-    logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
-    return;
-  }
-  logger.info("Greeting: " + response.getMessage());
+try {
+   response = blockingStub.sayHelloAgain(request);
+} catch (StatusRuntimeException e) {
+   logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
+   return;
+}
+logger.info("Greeting: " + response.getMessage());
 
 ./gradlew installDist
 
